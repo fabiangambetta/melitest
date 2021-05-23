@@ -1,0 +1,349 @@
+.App {
+  /*text-align: center;*/
+  background-color: #EEEEEE;
+  height: 1000px; /*TO DO*/
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+/*SEARCH BOX*/
+.searchbox_container
+{
+  display: inline-flex;
+  background-color: #fee600;
+  width: 70%;
+  border: dotted 3px #00bfff;
+  
+}
+
+.searchbox_img_container
+{
+  display:inline-block;
+  height: 70px;
+  width: 10%;
+  border-radius: 4px;
+  /*border: dotted 3px #00bfff;*/
+}
+
+.searchbox_input_container
+{
+  position:relative;
+  display:inline-block;
+  border-radius: 4px;
+  /*border: dotted 3px #00bfff;*/
+  height: 70px;
+  width: 90%;
+}
+
+
+.searchbox_input
+{
+    font-size: 1.125rem;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding:7px 60px 9px 15px;
+    height: 39px;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    vertical-align:middle;
+    border:none;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.searchbox_input:focus
+{
+  outline: none;
+}
+
+.searchbox_img
+{
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 20px;
+  height: 50px;
+  float:left;
+}
+
+.searchbox_button
+{
+    width: 39px;
+    height: 39px;
+    /*box-sizing: border-box;
+    display: inline-block;*/
+    vertical-align:middle;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+}
+
+.searchbox_button:hover
+{
+  cursor:pointer;
+}
+
+.searchbox_icon
+{
+    background-image: url("../../meliapp/src/assets/ic_Search.png");
+    color: black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin: 10px 5px 5px 5px;
+    content: '\EA27';
+}
+
+.header
+{
+  background-color: #FFE600;
+  color:#333333;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  height: auto;
+  text-align: center;
+}
+
+/* SEARCH RESULT ITEM */
+
+
+.search_result_item_container
+{
+    display: inline-flex;
+    display: block;
+    /*border: dotted 3px #00bfff;*/
+    width: 70%;
+    max-width: 70%;
+    height: 220px;
+    margin: auto;
+    background-color: white;
+}
+
+.search_result_location_container
+{
+    display:inline-block;
+    /*border: dotted 3px #00bfff;*/
+    width: 25%;
+    height: 180px;
+    margin-top: 20px;
+    margin-left: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.search_result_description_container
+{
+    display:inline-block;
+    /*border: dotted 3px #00bfff;*/
+    height: 180px;
+    width: 70%;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+
+.search_result_img
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+}
+
+.search_result_img_container
+{
+    display:inline-block;
+    /*border: dotted 3px red;*/
+    vertical-align: middle;
+    height: 180px;
+    margin-left: 10px;
+}
+
+.search_result_detail_container
+{
+    margin-left: 16px;
+    display:inline-block;
+    /*border: dotted 3px red; */
+    width: 60%;
+    height: 180px;
+    vertical-align: middle;
+}
+
+.search_result_description
+{
+    margin-top: 32px;
+    font-size: 18px;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    text-align: left;
+    width: 50%;
+}
+
+.search_result_price
+{
+    font-size: 24px;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    text-align: left;
+    margin-top:10px;
+}
+
+
+.search_result_location
+{
+    font-size: 12px;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    color: #999999;
+    margin-top: 25px;
+}
+
+.search_result_container
+{
+    display: inline-block;
+    width: 100%;
+    
+
+}
+
+.search_item_separator
+{
+  width: 95%;
+  color:#EEEEEE;
+}
+/* clears the 'X' from IE */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+/*BREADCRUMB*/
+.breadcrumb
+{
+    height: 30px;
+    
+}
+
+
+/*PRODUCT DETAILS*/
+
+.product_detail_container
+{
+    margin: auto;
+    display: flex;
+    width: 70%;
+    background-color: white;
+}
+
+.product_details_description
+{
+    height: 30%;
+    font-size: 16px;
+}
+
+.product_detail_img_and_description
+{
+    width: 60%;
+    height: 70%;
+    max-height: 680px;
+
+}
+
+.product_details_img_container
+{
+    height: 680px;
+}
+
+
+.product_detail_price
+{
+    width: 40%;
+    display: inline-block;
+    height: 100%;
+    margin-top: 32px;
+    font-size: 46px;
+    margin-bottom: 32px;
+}
+
+.product_details_img
+{
+    width: 680px;
+    height: 70%;
+}
+
+.product_detail_sales
+{
+    margin-top: 32px;
+    font-size: 14px;
+}
+
+.product_detail_title
+{
+    margin-top: 16px;
+    font-size: 24;
+}
+
+
+.product_detail_buy_button
+{
+    background-color: #3483fa;
+    color: white;
+    border-radius: 4px;
+    margin-right: 32px;
+    border: none;
+    width: 80%;
+    height: 50px;
+}
