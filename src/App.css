@@ -1,5 +1,4 @@
 .App {
-  /*text-align: center;*/
   background-color: #EEEEEE;
   height: 1000px; /*TO DO*/
 }
@@ -55,9 +54,7 @@
 .searchbox_container
 {
   display: inline-flex;
-  background-color: #fee600;
   width: 70%;
-  border: dotted 3px #00bfff;
   
 }
 
@@ -79,20 +76,15 @@
   height: 70px;
   width: 90%;
 }
-
-
 .searchbox_input
 {
     font-size: 1.125rem;
     font-weight: 300;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
     padding:7px 60px 9px 15px;
     height: 39px;
     width: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
     margin-left: 20px;
     vertical-align:middle;
     border:none;
@@ -109,11 +101,10 @@
 {
   margin: auto;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 20px;
   height: 50px;
+  width: 73px;
   float:left;
 }
 
@@ -121,12 +112,10 @@
 {
     width: 39px;
     height: 39px;
-    /*box-sizing: border-box;
-    display: inline-block;*/
     vertical-align:middle;
     border: none;
-    border-radius: 2px;
-    background-color: white;
+    border-radius: 0px 2px 2px 0px;
+    background-color: #EEEEEE;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
 }
 
@@ -153,7 +142,7 @@
   color:#333333;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  height: auto;
+  height: 50px;
   text-align: center;
 }
 
@@ -170,6 +159,7 @@
     height: 220px;
     margin: auto;
     background-color: white;
+    border-bottom: #61dafb;
 }
 
 .search_result_location_container
@@ -216,8 +206,9 @@
     display:inline-block;
     /*border: dotted 3px red; */
     width: 60%;
-    height: 180px;
+    height: 130px;
     vertical-align: middle;
+    
 }
 
 .search_result_description
@@ -226,7 +217,7 @@
     font-size: 18px;
     font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
     text-align: left;
-    width: 50%;
+    width: 100%;
 }
 
 .search_result_price
@@ -234,7 +225,14 @@
     font-size: 24px;
     font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
     text-align: left;
-    margin-top:10px;
+    margin-top:32px;
+    display: inline;
+}
+
+.search_result_icon
+{
+  display: inline;
+  margin-left: 10px;
 }
 
 
@@ -256,8 +254,11 @@
 
 .search_item_separator
 {
-  width: 95%;
-  color:#EEEEEE;
+  width: 97%;
+  height: 1px;
+  background-color:#EEEEEE;
+  margin-top: 19px;
+  border:none;
 }
 /* clears the 'X' from IE */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
@@ -274,9 +275,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .breadcrumb
 {
     height: 30px;
-    
+    color: #333333;
+    font-size: 0.875rem;
+    padding: 1rem;
+    list-style-type: none;
+    width: 70%;
+    margin: auto;
 }
 
+.breadcrumb_category
+{
+  display: inline;
+}
+
+.breadcrumb_category:not(:first-child)::before {
+  content: ">";
+  padding: .5rem; }
 
 /*PRODUCT DETAILS*/
 
@@ -292,27 +306,28 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 {
     height: 30%;
     font-size: 16px;
+    margin-left: 32px;
+    margin-bottom: 32px;
 }
 
 .product_detail_img_and_description
 {
-    width: 60%;
+    width: 70%;
     height: 70%;
-    max-height: 680px;
 
 }
 
 .product_details_img_container
 {
-    height: 680px;
+    width: 680px;
+    margin-top: 32px;
+    margin-left: 32px;
+    text-align: center;
 }
-
 
 .product_detail_price
 {
-    width: 40%;
-    display: inline-block;
-    height: 100%;
+    
     margin-top: 32px;
     font-size: 46px;
     margin-bottom: 32px;
@@ -320,7 +335,6 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .product_details_img
 {
-    width: 680px;
     height: 70%;
 }
 
@@ -332,8 +346,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 .product_detail_title
 {
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
     margin-top: 16px;
-    font-size: 24;
+    font-size: 24px;
+    font-weight: bold;
+    width: 80%;
 }
 
 
@@ -346,4 +363,18 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     border: none;
     width: 80%;
     height: 50px;
+}
+
+.product_description_title{
+  font-size: 28px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  margin-top:32px;
+}
+
+.product_detail_price_container
+{
+    width: 30%;
+    display: inline-block;
+    height: 100%;
 }

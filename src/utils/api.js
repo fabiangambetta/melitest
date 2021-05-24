@@ -10,6 +10,7 @@ function searchItems(querysearch){
     var promise = new Promise(function(resolve,reject)
     {
         let url = api + '/items?q=' + querysearch;
+        console.log(url)
         sendRequest(url)
         .then(function (data) {
             console.log("searchItemById - resolve");
@@ -28,9 +29,11 @@ function searchItemById(id) {
     console.log("searchItemById");
     var promise = new Promise(function (resolve, reject) {
         let url = api + '/items/' + id;
+        console.log(url);
         sendRequest(url) 
         .then(function (data) {
             console.log("searchItemById - resolve");
+            console.log(data);
             resolve(data);
         }).
         catch(function (err) {
@@ -42,7 +45,7 @@ function searchItemById(id) {
 }
 
 function sendRequest(url) {
-    console.log("sendRequest");
+    console.log("sendRequest -" + url);
     var promise = new Promise(function (resolve, reject) {
         axios.defaults.headers.get['Content-Type'] = 'application/json;charset=utf-8';
         axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
@@ -62,6 +65,7 @@ function sendRequest(url) {
 const API = {
     searchItems: searchItems,
     searchitem: searchItemById
+
 };
 
 export default API;

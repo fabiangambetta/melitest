@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import react, { Component } from 'react';
 import { withRouter } from 'react-router';
-import logomeli from '../assets/Logo_ML.png';
+import logomeli from '../assets/Logo_ML@2x.png';
 
 
 
@@ -16,32 +16,33 @@ class Searchinput extends Component {
         const searchQuery = e.target.value;
         this.setState({ searchQuery: searchQuery });
         console.log(searchQuery);
-        
     }
 
     SearchItems(e)
     {
-
-        console.log("SEARCH");
         const query = this.state.searchQuery;
-        console.log(query);
-        alert(`/items?search=${query}`);
-        
         this.props.history.push('/items?search='+query);
+    }
+
+    enterPressed(e) {
+        var code = e.keyCode || e.which;
+        if(code === 13) { 
+            const query = this.state.searchQuery;
+            this.props.history.push('/items?search='+query);
+        } 
     }
     render() {
         return (
             <div className="searchbox_container">
                 <div className="searchbox_img_container">
-                    <img className="searchbox_img" src={logomeli} alt="Mercado Libre Uruguay - Donde comprar y vender de todo" />
+                    <img className="searchbox_img" src={logomeli} alt="Mercado Libre Uruguay - Donde comprar y vender de todo" aria-label="Mercadolibre"  />
                 </div>
                 <div className="searchbox_input_container" >
-                    <form>
-                        <input type="search" placeholder="Nunca dejes de buscar" className="searchbox_input" onChange={this.handleInputChange}></input>
-                        <button type="sumbit" className="searchbox_button" onClick={this.SearchItems} >
+                        <input type="search" placeholder="Nunca dejes de buscar"  aria-label="Escribe aquí lo que deseas buscar" className="searchbox_input" onKeyPress={this.enterPressed.bind(this)} onChange={this.handleInputChange} maxLength="70" value={this.state.searchQuery}></input>
+                        <button type="button" className="searchbox_button" aria-label="Buscar en mercado libre" onClick={this.SearchItems} >
                             <div className="searchbox_icon"></div>
                         </button>
-                    </form>
+                    
                 </div>
             </div>
         )

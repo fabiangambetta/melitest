@@ -20,11 +20,13 @@ app.get('/', function (req, res) {
 
 app.get('/api/items', cors(), function (req, res) {
 
+    console.log("ITES");
     let searchquery = req.query.q;
     let endpoint = MELI_API.GET_SEARCH_URL(searchquery);
+    console.log(endpoint);
     axios.get(endpoint)
         .then(function (response) {
-            ItemBuilder.BuildItems(response.data.results).then(function (data) {
+            ItemBuilder.BuildItems(response.data).then(function (data) {
                 res.send(data);
             })
         }).

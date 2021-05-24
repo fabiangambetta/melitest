@@ -5,12 +5,6 @@ import Searchitemresult from "./searchitemresult";
 
 
 function ProductDetails(props){
-
-    const numbers = [1];
-    const listitemresults = numbers.map(() => 
-        <Searchitemresult></Searchitemresult>
-    );
-
     return(
     
     <div className="search_result_container">
