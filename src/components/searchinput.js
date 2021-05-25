@@ -15,7 +15,6 @@ class Searchinput extends Component {
     handleInputChange(e) {
         const searchQuery = e.target.value;
         this.setState({ searchQuery: searchQuery });
-        console.log(searchQuery);
     }
 
     SearchItems(e)

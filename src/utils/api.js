@@ -6,18 +6,14 @@ const api = `${serverUrl}/api`;
 
 function searchItems(querysearch){
 
-    console.log("searchItems");
     var promise = new Promise(function(resolve,reject)
     {
         let url = api + '/items?q=' + querysearch;
-        console.log(url)
         sendRequest(url)
         .then(function (data) {
-            console.log("searchItemById - resolve");
             resolve(data);
         }).
         catch(function (err) {
-            console.log("searchItemById - reject");
             reject(err);
         })
     });
@@ -26,18 +22,13 @@ function searchItems(querysearch){
 
 
 function searchItemById(id) {
-    console.log("searchItemById");
     var promise = new Promise(function (resolve, reject) {
         let url = api + '/items/' + id;
-        console.log(url);
         sendRequest(url) 
         .then(function (data) {
-            console.log("searchItemById - resolve");
-            console.log(data);
             resolve(data);
         }).
         catch(function (err) {
-            console.log("searchItemById - reject");
             reject(err);
         })
     })
@@ -45,17 +36,14 @@ function searchItemById(id) {
 }
 
 function sendRequest(url) {
-    console.log("sendRequest -" + url);
     var promise = new Promise(function (resolve, reject) {
         axios.defaults.headers.get['Content-Type'] = 'application/json;charset=utf-8';
         axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
         axios.get(url)
             .then(function (response) {
-                console.log("sendRequest - resolve");
                 resolve(response.data);
             })
             .catch(function (error) {
-                console.log("sendRequest - reject");
                 reject(error);
             });
     });

@@ -29,6 +29,9 @@ function ItemDetails()
     if(item){
         const condicion = item.condition == 'used' ? 'Usado': 'Nuevo';
         const vendidos = `${item.sold_quantity} vendidos`;
+
+        const description = item.description;
+        const descritionparsed = description.split('\n').map((str,index) => <p key={index}>{str}</p>);
     return(
             <div>
                 <Breadcrumb categs={categories}></Breadcrumb>
@@ -40,7 +43,7 @@ function ItemDetails()
                     </div>
                     <div className="product_description_title">Descripción del producto</div>
                     <div className="product_details_description" aria-label="Descripción del producto">
-                        {(item.description) ? item.description : "Sin descripción."}
+                        {(descritionparsed) ? descritionparsed : "Sin descripción."}
                     </div>
                 </div>
                 <Itemdetailbuy item={item}></Itemdetailbuy>
