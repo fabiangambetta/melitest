@@ -49,7 +49,7 @@
   width: 1px;
 }
 
-
+@media screen and (max-width: 1920px) {
 /*SEARCH BOX*/
 .searchbox_container
 {
@@ -76,21 +76,24 @@
   height: 70px;
   width: 90%;
 }
-.searchbox_input
-{
-    font-size: 1.125rem;
-    font-weight: 300;
-    padding:7px 60px 9px 15px;
-    height: 39px;
-    width: 90%;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-left: 20px;
-    vertical-align:middle;
-    border:none;
-    border-radius: 2px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+
+@media screen and (max-width: 1920px) {
+  .searchbox_input
+  {
+      font-size: 1.125rem;
+      font-weight: 300;
+      padding:7px 60px 9px 15px;
+      height: 39px;
+      width: 96%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      vertical-align:middle;
+      border:none;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  }
 }
+
 
 .searchbox_input:focus
 {
@@ -156,10 +159,12 @@
     /*border: dotted 3px #00bfff;*/
     width: 70%;
     max-width: 70%;
-    height: 220px;
+    height: 180px;
     margin: auto;
     background-color: white;
     border-bottom: #61dafb;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .search_result_location_container
@@ -168,27 +173,24 @@
     /*border: dotted 3px #00bfff;*/
     width: 25%;
     height: 180px;
-    margin-top: 20px;
-    margin-left: 20px;
     vertical-align: middle;
     text-align: center;
+    
 }
 
 .search_result_description_container
 {
     display:inline-block;
-    /*border: dotted 3px #00bfff;*/
-    height: 180px;
     width: 70%;
-    margin-top: 20px;
     vertical-align: middle;
 }
 
 .search_result_img
 {
     width: 180px;
-    height: 180px;
     border-radius: 4px;
+    vertical-align: middle;
+    height: auto;
 }
 
 .search_result_img_container
@@ -197,7 +199,9 @@
     /*border: dotted 3px red;*/
     vertical-align: middle;
     height: 180px;
-    margin-left: 10px;
+    width: 180px;
+    margin-left: 16px;
+    line-height: 180px;
 }
 
 .search_result_detail_container
@@ -257,8 +261,8 @@
   width: 97%;
   height: 1px;
   background-color:#EEEEEE;
-  margin-top: 19px;
   border:none;
+  margin: unset;
 }
 /* clears the 'X' from IE */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
@@ -274,13 +278,13 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /*BREADCRUMB*/
 .breadcrumb
 {
-    height: 30px;
     color: #333333;
     font-size: 0.875rem;
     padding: 1rem;
     list-style-type: none;
     width: 70%;
     margin: auto;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
 }
 
 .breadcrumb_category
@@ -322,7 +326,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     width: 680px;
     margin-top: 32px;
     margin-left: 32px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .product_detail_price
@@ -377,4 +381,61 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
     width: 30%;
     display: inline-block;
     height: 100%;
+}
+
+}
+
+@media screen and (max-width: 1280px) {
+  .searchbox_input
+  {
+      font-size: 1.125rem;
+      font-weight: 300;
+      padding:7px 60px 9px 15px;
+      height: 39px;
+      width: 94%;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      vertical-align:middle;
+      border:none;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .header
+{
+  background-color: #FFE600;
+  color:#333333;
+  padding-top: 0.5rem;
+  height: 50px;
+  text-align: center;
+}
+
+  .searchbox_input
+  {
+      font-size: 1.125rem;
+      font-weight: 300;
+      padding:7px 60px 9px 15px;
+      height: 39px;
+      width: 80%;
+      margin: auto;
+      vertical-align:middle;
+      border:none;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  }
+
+  
+  .searchbox_img
+  {
+    margin: auto;
+    display: block;
+    margin-left: 0px;
+    margin-right: 20px;
+    height: 40px;
+    width: 63px;
+    float:left;
+  }
 }

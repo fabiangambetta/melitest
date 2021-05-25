@@ -8,9 +8,9 @@ const Breadcrumb = (props) => {
             </li>
         );
         return (
-            <div className="breadcrumb">
+            <ul className="breadcrumb">
                 {categories}
-            </div>
+            </ul>
         );
     }
     else {

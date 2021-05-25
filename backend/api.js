@@ -46,6 +46,7 @@ app.get('/api/items/:id', cors(), function (req, res) {
                 res.send(data);
             })
             .catch(function (data) {
+                console.log("ERROR 1")
                 res.send(data);
             })
         })

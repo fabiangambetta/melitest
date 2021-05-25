@@ -4,27 +4,26 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  //Link
 } from "react-router-dom";
-import { createBrowserHistory } from "history";
+
 import SearchBox from './components/SearchBox';
 import PageSection from './components/PageSection';
 import ProductDetails from './components/ProductDetail';
+import Header from './components/header';
 
 export default function App(){
-  const history = createBrowserHistory();
+
   return (
     <div className="App">
-      <Router history={history}>
+      <Router > 
+      <Header ></Header>
         <Switch>
           <Route path="/items/:id">
-            <ProductDetails></ProductDetails>
+            <ProductDetails/>
           </Route>
           <Route path="/items">
-            <PageSection></PageSection>
-          </Route>
-          <Route path="/">
-            <SearchBox></SearchBox>
+            <PageSection/>
           </Route>
         </Switch>
       </Router>

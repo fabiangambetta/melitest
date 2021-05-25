@@ -19,10 +19,25 @@ const getCategories = function(filters){
     });
   }
 
-function compareResults(a, b) {
-    if (a.results < b.results) { return 1; }
-    if (a.results > b.results) { return -1; }
-    return 0;
+  const getCategoriesById = function(category_id)
+  {
+    return new Promise(function(resolve, reject){
+        let categories = [];
+        const urlApiCategory = MELI_API.GET_CATEGORIES_URL(category_id);
+        axios.get(urlApiCategory)
+        .then(function(response){
+            console.log(response.data.path_from_root)
+            categories = response.data.path_from_root.map(function(value) {
+                return value.name
+			});
+            resolve(categories);
+        })
+        .catch(function(err){
+            reject("error")
+        })
+        
+    }
+    );
   }
 
 function BuildItems(data) {
@@ -32,21 +47,15 @@ function BuildItems(data) {
         result.author = { name: "Fabián", lastname: "Gambetta" };
         result.categories = {};
         result.items = [];
-
-        console.log("FILTERS");
-        console.log(data.filters);
         let promises = items.map(function(item){
             return BuildItem(item);
           });
-        
-        
         let catpromise = getCategories(data.filters).then(
             function(cats)
             {
                 result.categories = cats;
             }
         )
-
         Promise.all(promises,catpromise).then(function(items){
             result.items = items;
             resolve(result);
@@ -66,6 +75,7 @@ const getDescription = function (itemId) {
                 resolve(response.data.plain_text);
             })
             .catch(function (response) {
+                console.log("ERROR 8")
                 reject(response);
             });
     });
@@ -82,6 +92,7 @@ const getCurrency = function (currency_id) {
                 resolve(currency);
             })
             .catch(function (response) {
+                console.log("ERROR 7")
                 reject(response);
             });
     });
@@ -91,26 +102,41 @@ function BuildItemWithAuthor(data)
 {
     return new Promise(function(resolve,reject)
     {
+        console.log("111111")
         let result = {};
-        BuildItem(data).then(function(item)
+        let buildpromise = BuildItem(data).then(function(item)
         {
-            console.log("A8")
+            console.log("222222")
             result.author = { name: "Fabián", lastname: "Gambetta" };
             result.item = item;
-            resolve(result);
         })
         .catch(function(){
-            console.log("Error2");
+            console.log("333333")
+            console.log("ERROR 12")
+        })
+        let promisecategory = getCategoriesById(data.category_id).then(function(data){
+            console.log("444444")
+            result.categories = data;
+        })
+        .catch(function(){
+            console.log("555555")
+            console.log("ERROR 13")
+        })
+        Promise.all([buildpromise,promisecategory]).then(
+            function(){
+                resolve(result);
+            }
+        )
+        .catch(function(){
             reject(result);
         })
     })
 }
 
 function BuildItem(data) {
-    console.log("BuildItem ");
+
     var promise = new Promise(function (resolve, reject) {
         let result = {};
-        console.log("A1")
         result.id = data.id;
         result.title = data.title;
         result.price = {};
@@ -118,7 +144,7 @@ function BuildItem(data) {
         result.condition = data.condition;
         result.sold_quantity = data.sold_quantity;
         result.free_shipping = data.shipping.free_shipping;
-        console.log("A2")
+        result.address = data.seller_address.state.name;
         if(data.pictures && data.pictures.length>0){
             result.picture = data.pictures[0].url;
         }
@@ -136,7 +162,7 @@ function BuildItem(data) {
                     result.price.decimals = response.decimals;
                 }
             ).catch(function(){
-                console.log("falló concurrency")
+                console.log("ERROR 3")
             })
         let DescriptionProm = getDescription(data.id)
             .then(
@@ -145,15 +171,14 @@ function BuildItem(data) {
                     result.description = description;
                 }
             ).catch(function(data){
-                console.log("fallo desc")
-                console.log(data);
+                console.log("ERROR 4")
             })
         Promise.all([CurrencyProm, DescriptionProm]).then(function () {
             console.log("A6")
             resolve(result);
         })
         .catch(function (err) {
-            console.log("A7");
+            console.log("ERROR 5")
             reject(result);
         })
     });

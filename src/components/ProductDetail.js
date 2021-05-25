@@ -8,8 +8,6 @@ function ProductDetails(props){
     return(
     
     <div className="search_result_container">
-        <Header></Header>
-        <Breadcrumb></Breadcrumb>
         <ItemDetails></ItemDetails>
     </div>
     );

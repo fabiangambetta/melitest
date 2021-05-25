@@ -15,14 +15,10 @@ function PageSection(props) {
         return new URLSearchParams(useLocation().search);
     }
     const Query = useQuery().get('search');
-    console.log(Query);
-
     useEffect(() => {
         API.searchItems(Query)
             .then(
                 (data) => {
-                    console.log("DATA");
-                    console.log(data)
                     setItems(data.items);
                     setCategories(data.categories);
                 }
@@ -33,14 +29,11 @@ function PageSection(props) {
     }, [Query])
 
     if (items) {
-        console.log(items)
-        console.log(categories)
         const listitemresults = items.map((item,index) =>
            <Searchitemresult key={item.id} item={item} last={index == items.length-1} ></Searchitemresult>
         );
         return (
             <div>
-                <Header ></Header>
                 <Breadcrumb categs={categories}></Breadcrumb>
                 <div className="search_result_container">
                     {listitemresults}
@@ -51,9 +44,7 @@ function PageSection(props) {
     }
     else {
         return (
-
             <div className="search_result_container">
-                <Header></Header>
                 <Breadcrumb></Breadcrumb>
                 <div></div>
             </div>)

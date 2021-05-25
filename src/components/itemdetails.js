@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import API from '../utils/api';
+import Breadcrumb from './breadcrumb';
+import Header from './header';
 import Itemdetailbuy from './itemdetailbuy';
 
 function ItemDetails()
 {
     let [item, setItem] = useState(null);
+    let [categories,setCategories] = useState(null);
     let {id} = useParams();
     useEffect(()=>{
         API.searchitem(id)
         .then((data)=>
         {
             setItem(data.item)
+            setCategories(data.categories)
         })
         .catch(
             function(error)
@@ -26,6 +30,8 @@ function ItemDetails()
         const condicion = item.condition == 'used' ? 'Usado': 'Nuevo';
         const vendidos = `${item.sold_quantity} vendidos`;
     return(
+            <div>
+                <Breadcrumb categs={categories}></Breadcrumb>
             
             <div className="product_detail_container">
                 <div className="product_detail_img_and_description">
@@ -38,6 +44,7 @@ function ItemDetails()
                     </div>
                 </div>
                 <Itemdetailbuy item={item}></Itemdetailbuy>
+            </div>
             </div>
         );
     }

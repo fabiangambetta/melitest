@@ -1,5 +1,5 @@
 import Searchinput from "./searchinput";
-const Header = () =>
+const Header = (props) =>
 (
     <div className="header">
         <Searchinput></Searchinput>
