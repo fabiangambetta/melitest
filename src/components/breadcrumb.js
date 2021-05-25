@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../assets/styles/components/Breadcrumb.css';
 const Breadcrumb = (props) => {
 
     if (props.categs) {

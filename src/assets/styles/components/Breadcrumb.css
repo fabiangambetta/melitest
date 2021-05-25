@@ -1,0 +1,23 @@
+/*BREADCRUMB*/
+
+@media screen and (max-width: 1920px) {
+  .breadcrumb {
+    color: #333333;
+    font-size: 0.875rem;
+    padding: 1rem;
+    list-style-type: none;
+    width: 70%;
+    margin: auto;
+    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
+      Arial, sans-serif;
+  }
+
+  .breadcrumb_category {
+    display: inline;
+  }
+
+  .breadcrumb_category:not(:first-child)::before {
+    content: ">";
+    padding: 0.5rem;
+  }
+}

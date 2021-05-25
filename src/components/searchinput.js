@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 import react, { Component } from 'react';
 import { withRouter } from 'react-router';
 import logomeli from '../assets/images/Logo_ML@2x.png';
+import '../assets/styles/components/SearchInput.css';
 
 
 

@@ -1,5 +1,6 @@
 import COMMON from '../utils/common.js'
 import PropTypes from 'prop-types';
+import '../assets/styles/components/Itemdetailbuy.css';
 
 const Itemdetailbuy = (props) =>
 {

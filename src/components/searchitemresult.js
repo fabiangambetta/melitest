@@ -3,6 +3,7 @@ import { withRouter } from 'react-router';
 import shipping_icon from '../assets/images/ic_shipping.png';
 import PropTypes from 'prop-types';
 import COMMON from '../utils/common.js';
+import '../assets/styles/components/Searchitemresult.css';
 
 /* Esta componente es la encargada de renderizar el item que muestra un resultado de la búsqueda */
 const Searchitemresult = (props) =>

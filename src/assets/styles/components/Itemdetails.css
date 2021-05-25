@@ -1,0 +1,33 @@
+@media screen and (max-width: 1920px) {
+    .product_detail_container {
+      margin: auto;
+      display: flex;
+      width: 70%;
+      background-color: white;
+      margin-bottom: 10px;
+    }
+  
+    .product_details_description {
+      height: 30%;
+      font-size: 16px;
+      margin-left: 32px;
+      margin-bottom: 32px;
+    }
+  
+    .product_detail_img_and_description {
+      width: 70%;
+      height: 70%;
+    }
+  
+    .product_details_img_container {
+      width: 680px;
+      margin-top: 32px;
+      margin-left: 32px;
+    }
+    .product_details_img {
+      height: 70%;
+    }
+  
+  
+  }
+  

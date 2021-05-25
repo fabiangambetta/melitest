@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import API from "../utils/api";
 import Breadcrumb from "./Breadcrumb";
 import Itemdetailbuy from "./Itemdetailbuy";
+import '../assets/styles/components/Itemdetails.css';
+import Notresults from "./Notresults";
 
 /* Esta componente es responsable de mostrar el detalle del producto seleccionado */
 function ItemDetails() {
@@ -60,14 +62,18 @@ function ItemDetails() {
       </>
     );
   } else if (error) {
+    const message = `No se ha podido recuperar ningún elemento con el id ${id}`
     return (
+        <>
+        <Breadcrumb categs={null}></Breadcrumb>
         <div className="product_detail_container">
-            <div className="product_detail_container">No se ha podido recuperar ningún elemento con el id {id}</div>
-        </div>);
+            <Notresults message= {message}></Notresults>
+        </div>
+        </>);
   }
   return (
     
-      <div ></div>
+      <div className="product_detail_container" ></div>
 
   );
 }

@@ -1,6 +1,7 @@
 import Breadcrumb from "./Breadcrumb";
 import Searchitemresult from "./Searchitemresult";
 import API from "../utils/api.js";
+import '../assets/styles/components/Searchresults.css';
 import {
     useLocation
 } from "react-router-dom";
