@@ -1,27 +1,31 @@
 # Test - Mercado Libre
 
-#Tecnologías
-FrontEnd
+# Tecnologías
+## FrontEnd
     - HTML
     - Java Script
     - CSS
-Backend
+## Backend
     - ExpressJS
     - Node js (v14.16.0)
 
-#Instalación y despliegue
+# Instalación y despliegue
 
-Backend:
+## Backend:
+<code>
 cd backend
 npm install
 node api.js
+</code>
 
-Frontend:
+## Frontend:
+<code>
 npm install
 npm run build
 npm start
+</code>
 
-Nota
+# Nota
 
 Por defecto el servidor corre en localhost:4001, en modo "dev" (desarrollo) y espera que el frontend corra en localhost:3000.
 Si es necesario modificar el puerto de la api consumida en el frontend
