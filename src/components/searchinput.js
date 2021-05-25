@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import react, { Component } from 'react';
 import { withRouter } from 'react-router';
-import logomeli from '../assets/Logo_ML@2x.png';
+import logomeli from '../assets/images/Logo_ML@2x.png';
 
 
 
@@ -12,15 +12,13 @@ class Searchinput extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.SearchItems = this.SearchItems.bind(this);
     }
+
+    /*Actualiza el estado con el texto que se ingresa en la cadena de búsqueda */
     handleInputChange(e) {
         const searchQuery = e.target.value;
         this.setState({ searchQuery: searchQuery });
     }
-    SearchItems(e)
-    {
-        const query = this.state.searchQuery;
-        this.props.history.push('/items?search='+query);
-    }
+    /*Dispara la búsqueda por enter en el input */
     enterPressed(e) {
         var code = e.keyCode || e.which;
         if(code === 13) { 
@@ -28,6 +26,15 @@ class Searchinput extends Component {
             this.props.history.push('/items?search='+query);
         } 
     }
+
+    SearchItems(e)
+    {
+        const query = this.state.searchQuery;
+        if(query){
+            this.props.history.push('/items?search='+query);
+        }
+    }
+    
     render() {
         return (
             <div className="searchbox_container">

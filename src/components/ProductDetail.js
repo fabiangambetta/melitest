@@ -1,7 +1,5 @@
-import Breadcrumb from "./breadcrumb";
-import Header from "./header";
-import ItemDetails from "./itemdetails";
-import Searchitemresult from "./searchitemresult";
+import Breadcrumb from "./Breadcrumb";
+import ItemDetails from "./Itemdetails";
 
 
 function ProductDetails(props){

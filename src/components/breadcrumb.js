@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 const Breadcrumb = (props) => {
 
     if (props.categs) {

@@ -1,15 +1,15 @@
-import Breadcrumb from "./breadcrumb";
-import Header from "./header";
-import Searchitemresult from "./searchitemresult";
+import Breadcrumb from "./Breadcrumb";
+import Searchitemresult from "./Searchitemresult";
 import API from "../utils/api.js";
 import {
     useLocation
 } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 
-function PageSection(props) {
+function Searchresults() {
     let [items, setItems] = useState(null);
     let [categories,setCategories] = useState(null);
+    let [error,setError] = useState(false);
 
     function useQuery() {
         return new URLSearchParams(useLocation().search);
@@ -21,10 +21,13 @@ function PageSection(props) {
                 (data) => {
                     setItems(data.items);
                     setCategories(data.categories);
+                    setError(false);
                 }
             )
             .catch(
-                function (data) { console.log("falla") }
+                function () {
+                    setError(true);
+                }
             )
     }, [Query])
 
@@ -42,7 +45,13 @@ function PageSection(props) {
 
         );
     }
-    else {
+    else if(error){
+        return (
+            <div className="search_result_container">
+                <div>No se ha recuperado ningún resultado para la búsqueda realizada</div>
+            </div>)
+    }
+    else{
         return (
             <div className="search_result_container">
                 <Breadcrumb></Breadcrumb>
@@ -51,4 +60,4 @@ function PageSection(props) {
     }
 };
 
-export default PageSection;
+export default Searchresults;

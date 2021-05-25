@@ -1,0 +1,23 @@
+@media screen and (max-width: 1920px) {
+  .searchbox_container {
+    display: inline-flex;
+    width: 70%;
+  }
+
+  .searchbox_img_container {
+    display: inline-block;
+    height: 70px;
+    width: 10%;
+    border-radius: 4px;
+  }
+  .searchbox_img_container:hover {
+    cursor: pointer;
+  }
+  .searchbox_input_container {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    height: 70px;
+    width: 90%;
+  }
+}

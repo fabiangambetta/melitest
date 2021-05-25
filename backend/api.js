@@ -13,11 +13,16 @@ const app = express();
 app.use(cors());
 app.options('http://localhost:3000/', cors());
 
+const error = function(res,errorMessage){
+    return res.status(404).json({ error: errorMessage });
+}
 
 app.get('/', function (req, res) {
     res.send("IT'S ALIVE!!!!")
 });
 
+
+/* Ruta para obtener los elementos de que coínciden con la búsqueda */
 app.get('/api/items', cors(), function (req, res) {
 
     console.log("ITES");
@@ -29,12 +34,16 @@ app.get('/api/items', cors(), function (req, res) {
             ItemBuilder.BuildItems(response.data,true).then(function (data) {
                 res.send(data);
             })
+            .catch(function(response){
+
+            })
         }).
         catch(function (err) {
-            console.log(err);
+            error(res,"error al recuperar los elementos");
         })
 });
 
+/* Ruta para obtener un elemento por ID*/
 app.get('/api/items/:id', cors(), function (req, res) {
         let itemid = req.params.id;
         let endpoint = MELI_API.GET_ITEM_URL(itemid);
@@ -46,9 +55,11 @@ app.get('/api/items/:id', cors(), function (req, res) {
                 res.send(data);
             })
             .catch(function (data) {
-                console.log("ERROR 1")
                 res.send(data);
             })
+        })
+        .catch(function(err){
+            error(res,"error al recuperar el elemento");
         })
 });
 

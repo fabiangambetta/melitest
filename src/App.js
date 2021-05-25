@@ -3,14 +3,13 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  //Link
+  Route
 } from "react-router-dom";
 
 
-import PageSection from './components/PageSection';
-import ProductDetails from './components/ProductDetail';
-import Header from './components/header';
+import Searchresults from './components/Searchresults';
+import ProductDetails from './components/Productdetail';
+import Header from './components/Header';
 
 export default function App(){
 
@@ -23,12 +22,11 @@ export default function App(){
             <ProductDetails/>
           </Route>
           <Route path="/items">
-            <PageSection/>
+            <Searchresults/>
           </Route>
         </Switch>
       </Router>
     </div>
   );
-
 }
 

@@ -4,6 +4,7 @@ const serverUrl = 'http://localhost:4001';
 const api = `${serverUrl}/api`;
 
 
+
 function searchItems(querysearch){
 
     var promise = new Promise(function(resolve,reject)
@@ -26,9 +27,11 @@ function searchItemById(id) {
         let url = api + '/items/' + id;
         sendRequest(url) 
         .then(function (data) {
+            console.log(data.status);
             resolve(data);
         }).
         catch(function (err) {
+            console.log("Error byid");
             reject(err);
         })
     })
@@ -41,9 +44,11 @@ function sendRequest(url) {
         axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
         axios.get(url)
             .then(function (response) {
+                console.log(response.status);
                 resolve(response.data);
             })
             .catch(function (error) {
+                console.log("Error sendrequest");
                 reject(error);
             });
     });
