@@ -13,9 +13,9 @@
 
 ## Backend:
 <code>
-cd backend
-npm install
-node api.js
+<p>cd backend</p>
+<p>npm install</p>
+<p>node api.js</p>
 </code>
 
 ## Frontend:
