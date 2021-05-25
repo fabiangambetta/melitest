@@ -133,7 +133,7 @@ function BuildItemWithAuthor(data)
     })
 }
 
-function BuildItem(data) {
+function BuildItem(data, thumbnail = false) {
 
     var promise = new Promise(function (resolve, reject) {
         let result = {};
@@ -145,12 +145,12 @@ function BuildItem(data) {
         result.sold_quantity = data.sold_quantity;
         result.free_shipping = data.shipping.free_shipping;
         result.address = data.seller_address.state.name;
-        if(data.pictures && data.pictures.length>0){
+        if(!thumbnail && data.pictures && data.pictures.length>0){
             result.picture = data.pictures[0].url;
         }
         else
         {
-            let src_aux = data.thumbnail.replace('-I','-O')
+            let src_aux = data.thumbnail; //.replace('-I','-O')
             result.picture = src_aux;
         }
         console.log("A3")

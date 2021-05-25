@@ -23,7 +23,7 @@ const Searchitemresult = (props) =>
                 <div className="search_result_detail_container">
                     <div className="search_result_price">{props.item.price.currency} {formatNumber(props.item.price.amount)}</div>
                     <div className="search_result_icon">
-                        {props.item.free_shipping && <img src={shipping_icon}></img>}
+                        {props.item.free_shipping && <img src={shipping_icon} alt="Entrega gratis"></img>}
                     </div>
                     <div className="search_result_description">
                         {props.item.title}
@@ -31,7 +31,7 @@ const Searchitemresult = (props) =>
                 </div>
             </div>
             <div className="search_result_location_container">
-                <div className="search_result_location">{props.item.address}</div>
+                <div className="search_result_location" >{props.item.address}</div>
             </div>  
         </div>
         {!props.last && <hr className="search_item_separator" ></hr>}

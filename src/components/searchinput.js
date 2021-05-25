@@ -16,13 +16,11 @@ class Searchinput extends Component {
         const searchQuery = e.target.value;
         this.setState({ searchQuery: searchQuery });
     }
-
     SearchItems(e)
     {
         const query = this.state.searchQuery;
         this.props.history.push('/items?search='+query);
     }
-
     enterPressed(e) {
         var code = e.keyCode || e.which;
         if(code === 13) { 

@@ -7,7 +7,7 @@ import {
   //Link
 } from "react-router-dom";
 
-import SearchBox from './components/SearchBox';
+
 import PageSection from './components/PageSection';
 import ProductDetails from './components/ProductDetail';
 import Header from './components/header';
