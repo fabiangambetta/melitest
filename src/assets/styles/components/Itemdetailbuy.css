@@ -23,13 +23,6 @@
     height: 50px;
   }
 
-  .product_description_title {
-    font-size: 28px;
-    margin-left: 32px;
-    margin-bottom: 32px;
-    margin-top: 32px;
-  }
-
   .product_detail_price_container {
     width: 30%;
     display: inline-block;

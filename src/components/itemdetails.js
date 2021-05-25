@@ -45,9 +45,9 @@ function ItemDetails() {
                 alt="Imagen del producto"
               ></img>
             </div>
-            <div className="product_description_title">
+            <h2 className="product_description_title">
               Descripción del producto
-            </div>
+            </h2>
             <div
               className="product_details_description"
               aria-label="Descripción del producto"

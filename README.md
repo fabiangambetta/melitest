@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Test - Mercado Libre
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Tecnologías
+FrontEnd
+    - HTML
+    - Java Script
+    - CSS
+Backend
+    - ExpressJS
+    - Node js (v14.16.0)
 
-## Available Scripts
+#Instalación y despliegue
 
-In the project directory, you can run:
+Backend:
+cd backend
+npm install
+node api.js
 
-### `npm start`
+Frontend:
+npm install
+npm run build
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Nota
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Por defecto el servidor corre en localhost:4001, en modo "dev" (desarrollo) y espera que el frontend corra en localhost:3000.
+Si es necesario modificar el puerto de la api consumida en el frontend
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#Frontend
+ - Diseño responsivo usando media queries de CSS.
+ - Uso de atributos ARIA para mejorar SEO.
+ - Se crea una vista adicional para notificar al usuario cuando no se han encontrado resultados para su búsqueda.
+ - Uso PropTypes para definir el formato esperado de props por cada componente.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ Oportunidades de mejora en el FrontEnd:
+ - [Performance] Lazy Loading de componentes con React.Lazy y Suspense.
+ - Las imagenes de la vista de resultados se ven pixeladas al utilizar las miniaturas (90x90) provistas por la API.
+ - [Performance] Implementar una caché que permita mantener los resultados de la última búsqueda en memoria durante x segundos.
+ - [Performance] Incorporar Server Side Rendering.
+ - [PWA] Redireccionar Tráfico https y registrar Service Worker.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Oportunidades de mejora en el Backend
+ - [Arquitectura]
+ - [Performance] Implementar una caché para datos reutilizables y que entiendo no cambian frecuentemente, por ejemplo, las currency.

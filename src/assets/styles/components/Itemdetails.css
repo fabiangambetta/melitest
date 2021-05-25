@@ -27,6 +27,13 @@
     .product_details_img {
       height: 70%;
     }
+    .product_description_title {
+      font-size: 28px;
+      margin-left: 32px;
+      margin-bottom: 32px;
+      margin-top: 32px;
+      font-weight: 400;
+    }
   
   
   }
