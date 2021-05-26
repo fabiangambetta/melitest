@@ -20,10 +20,10 @@ En el archivo .nvmrc se específica la versión de Node a utilizar.
 
 
 ## Frontend:
-- cd melitest/frontend
-- npm i
-- npm run build
-- npm run start
+    cd melitest/frontend
+    npm i
+    npm run build
+    npm run start
 
 # Nota
 
