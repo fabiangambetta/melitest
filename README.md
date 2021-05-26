@@ -12,7 +12,7 @@
 # Instalación y despliegue
 
 ## Backend:
-    cd backend 
+    cd meli/backend 
     npm install
     node api.js
 
@@ -35,13 +35,23 @@ Si es necesario modificar el puerto de la api consumida en el frontend
  - Se crea una vista adicional para notificar al usuario cuando no se han encontrado resultados para su búsqueda.
  - Uso PropTypes para definir el formato esperado de props por cada componente.
 
+#Backend
+ - Se habilitan CORS para localhost:3000 unicamente.
+ - Se utilizan Promises en todas las llamadas a la api.
+ - 
+
+### Imagenes
+Para el atributo thumbnai en la api https://api.mercadolibre.com/sites/MLA/search?q=:query no siempre tienen un tamaño 90x90 como suguiere la propuesta, debido a esto y para no estiar la imagen en la pantalla que muestra los resultados de las búsquedas decidí que la imagen respete el width 180 px, si la imagen es 90x90 
+se mostrará con un tamaño 180x180, sino se mostrará 180 x heigth, con max-heigth 180 px.
+
 
  Oportunidades de mejora en el FrontEnd:
  - [Performance] Lazy Loading de componentes con React.Lazy y Suspense.
- - Las imagenes de la vista de resultados se ven pixeladas al utilizar las miniaturas (90x90) provistas por la API.
+ - Las imagenes de la vista de resultados se ven pixeladas al utilizar las miniaturas (90x90) provistas por la API. 
  - [Performance] Implementar una caché que permita mantener los resultados de la última búsqueda en memoria durante x segundos.
  - [Performance] Incorporar Server Side Rendering.
  - [PWA] Redireccionar Tráfico https y registrar Service Worker.
+ - [Testing] Implementar test automatizados.
 
  Oportunidades de mejora en el Backend
  - [Arquitectura]

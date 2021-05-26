@@ -24,7 +24,9 @@ class Searchinput extends Component {
         var code = e.keyCode || e.which;
         if(code === 13) { 
             const query = this.state.searchQuery;
-            this.props.history.push('/items?search='+query);
+            if(query){
+                this.props.history.push('/items?search='+query);
+            }
         } 
     }
 

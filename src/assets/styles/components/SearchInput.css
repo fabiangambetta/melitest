@@ -1,4 +1,4 @@
-@media screen and (max-width: 1920px) {
+@media screen and (min-width:1280px)  {
   .searchbox_container {
     display: inline-flex;
     width: 70%;
@@ -73,28 +73,31 @@
     content: "\EA27";
   }
 
-  /* Elimina la 'X' del input IE */
-  input[type="search"]::-ms-clear {
-    display: none;
-    width: 0;
-    height: 0;
-  }
-  input[type="search"]::-ms-reveal {
-    display: none;
-    width: 0;
-    height: 0;
-  }
 
-  /* Elimina la 'X' del input en  Chrome */
-  input[type="search"]::-webkit-search-decoration,
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-results-button,
-  input[type="search"]::-webkit-search-results-decoration {
-    display: none;
-  }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width:1085px) and (max-width: 1280px) {
+  
+  .searchbox_container {
+    display: inline-flex;
+    width: 70%;
+  }
+  .searchbox_img_container {
+    display: inline-block;
+    height: 70px;
+    width: 10%;
+    border-radius: 4px;
+  }
+  .searchbox_img_container:hover {
+    cursor: pointer;
+  }
+  .searchbox_input_container {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    height: 70px;
+    width: 90%;
+  }
   .searchbox_input
   {
       font-size: 1.125rem;
@@ -109,9 +112,68 @@
       border-radius: 2px;
       box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
   }
+
+  .searchbox_input:focus {
+    outline: none;
+  }
+
+  .searchbox_img {
+    margin: auto;
+    display: block;
+    margin-left: 0px;
+    margin-right: 20px;
+    height: 50px;
+    width: 73px;
+    float: left;
+  }
+
+  .searchbox_button {
+    width: 39px;
+    height: 39px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 0px 2px 2px 0px;
+    background-color: #eeeeee;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .searchbox_button:hover {
+    cursor: pointer;
+  }
+
+  .searchbox_icon {
+    background-image: url("../../images/ic_Search.png");
+    color: black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin: 10px 5px 5px 5px;
+    content: "\EA27";
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1085px) {
+  .searchbox_container {
+    display: inline-flex;
+    width: 70%;
+  }
+  .searchbox_img_container {
+    display: inline-block;
+    height: 70px;
+    width: 10%;
+    border-radius: 4px;
+  }
+  .searchbox_img_container:hover {
+    cursor: pointer;
+  }
+  .searchbox_input_container {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    height: 70px;
+    width: 90%;
+  }
   .searchbox_input
   {
       font-size: 1.125rem;
@@ -135,6 +197,33 @@
     width: 63px;
     float:left;
   }
+  .searchbox_button {
+    width: 39px;
+    height: 39px;
+    vertical-align: middle;
+    border: none;
+    border-radius: 0px 2px 2px 0px;
+    background-color: #eeeeee;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .searchbox_button:hover {
+    cursor: pointer;
+  }
+
+  .searchbox_icon {
+    background-image: url("../../images/ic_Search.png");
+    color: black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin: 10px 5px 5px 5px;
+    content: "\EA27";
+  }
+  .searchbox_input:focus {
+    outline: none;
+  }
 }
 
 @media screen and (max-width: 480px)
@@ -142,4 +231,52 @@
   .searchbox_button{
     display: none;
   }
+
+  .searchbox_img_container
+  {
+    display: none;
+  }
+
+  .searchbox_container
+  {
+    display: inline-block;
+  }
+
+  .searchbox_input_container
+  {
+    width: 100%;
+  }
+  .searchbox_input
+  {
+      font-size: 1.125rem;
+      font-weight: 300;
+      padding:7px 60px 9px 15px;
+      height: 39px;
+      width: 80%;
+      margin: auto;
+      vertical-align:middle;
+      border:none;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  }
 }
+
+  /* Elimina la 'X' del input IE */
+  input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* Elimina la 'X' del input en  Chrome */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }

@@ -32,7 +32,7 @@ function ItemDetails() {
     const description = item.description;
     const descritionparsed = description
       .split("\n")
-      .map((str, index) => <p key={index}>{str}</p>);
+      .map((str, index) => <p className="product_detail_paragraph" key={index}>{str}</p>);
     return (
       <>
         <Breadcrumb categs={categories}></Breadcrumb>

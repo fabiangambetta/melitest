@@ -1,168 +1,152 @@
-@media screen and (max-width: 1920px) {
-  .search_result_item_container {
-    display: inline-flex;
-    display: block;
-    width: 70%;
-    max-width: 70%;
-    height: 180px;
-    margin: auto;
-    background-color: white;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  .search_result_location_container {
-    display: inline-block;
-    width: 25%;
-    height: 180px;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  .search_result_description_container {
-    display: inline-block;
-    width: 70%;
-    vertical-align: middle;
-  }
-
-  .search_result_img {
-    width: 180px;
-    max-height: 180px;
-    border-radius: 4px;
-    vertical-align: middle;
-    height: auto;
-  }
-
-  .search_result_img_container {
-    display: inline-block;
-    vertical-align: middle;
-    height: 180px;
-    width: 180px;
-    margin-left: 16px;
-  }
-
-  .search_result_detail_container {
-    margin-left: 16px;
-    display: inline-block;
-    width: 60%;
-    height: 130px;
-    vertical-align: middle;
-  }
-
-  .search_result_description {
-    margin-top: 32px;
-    font-size: 18px;
-    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
-      Arial, sans-serif;
-    text-align: left;
-    width: 100%;
-  }
-
-  .search_result_price {
-    font-size: 24px;
-    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
-      Arial, sans-serif;
-    text-align: left;
-    margin-top: 32px;
-    display: inline;
-  }
-
-  .search_result_icon {
-    display: inline;
-    margin-left: 10px;
-    height: 15px;
-    width: 15px;
-  }
-  .search_result_location {
-    font-size: 12px;
-    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,
-      Arial, sans-serif;
-    color: #999999;
-    margin-top: 25px;
-  }
-  .search_result_container {
-    display: inline-block;
-    width: 100%;
-  }
-  .search_item_separator {
-    width: 97%;
-    height: 1px;
-    background-color: #eeeeee;
-    border: none;
-    margin: unset;
-  }
+.search_item_separator {
+	width: 97%;
+	height: 1px;
+	background-color: #eeeeee;
+	border: none;
+	margin: unset;
 }
-
-@media screen and (max-width: 1280px) {
+.search_result_item_container {
+	display: inline-flex;
+	display: block;
+	width: 70%;
+	max-width: 70%;
+	height: 180px;
+	margin: auto;
+	background-color: white;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
-
+.search_result_img_container {
+	display: inline-block;
+	vertical-align: middle;
+	height: 180px;
+	width: 180px;
+	margin-left: 16px;
+}
+.search_result_img{
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.search_result_detail_container{
+	margin-left: 16px;
+	display:inline-block;
+	width: 60%;
+}
+.search_result_description {
+	margin-top: 32px;
+	font-size: 18px;
+	font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,Arial, sans-serif;
+	text-align: left;
+	width: 100%;
+}
+.search_result_price {
+	font-size: 24px;
+	font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,Arial, sans-serif;
+	text-align: left;
+	margin-top: 32px;
+	display: inline;
+}
+@media screen and (min-width:1085px) {
+	.search_result_location_container {
+		display: inline-block;
+		width: 25%;
+		height: 180px;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.search_result_description_container {
+		display: inline-block;
+		width: 70%;
+		vertical-align: middle;
+	}
+	.search_result_img {
+		width: 180px;
+		max-height: 180px;
+		height: auto;
+	}
+	.search_result_detail_container {
+		height: 130px;
+		vertical-align: middle;
+	}
+	.search_result_icon {
+		display: inline;
+		margin-left: 10px;
+		height: 15px;
+		width: 15px;
+	}
+	.search_result_location {
+		font-size: 12px;
+		font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto,Arial, sans-serif;
+		color: #999999;
+		margin-top: 25px;
+	}
+	.search_result_container {
+		display: inline-block;
+		width: 100%;
+	}
+}
 @media screen and (min-width: 481px) and (max-width: 1085px) {
-  .search_result_location_container {
-    display: none;
-  }
-  .search_result_description_container {
-    display: inline-flex;
-    width: 100%;
-    vertical-align: middle;
-  }
-
-  .search_result_img {
-    width: 180px;
-    border-radius: 4px;
-    vertical-align: middle;
-    height: auto;
-  }
-  .search_result_detail_container
-    {
-        margin-left: 16px;
-        display:inline-block;
-        /*border: dotted 3px red; */
-        width: 60%;
-        height: 180px;
-        vertical-align: middle;
-        padding-right: 10px;
-        
-    }
+	.search_result_location_container {
+		display: none;
+	}
+	.search_result_description_container {
+		display: inline-flex;
+		width: 100%;
+		vertical-align: middle;
+	}
+	.search_result_img {
+		width: 180px;
+		height: auto;
+		max-height: 180px;
+	}
+	.search_result_detail_container{
+		height: 180px;
+		vertical-align: middle;
+		padding-right: 10px;
+	}
+	.search_result_icon {
+		display: inline;
+		margin-left: 10px;
+		height: 15px;
+		width: 15px;
+	}
 }
-
 @media screen and (max-width: 480px) {
-  .search_result_item_container {
-    display: inline-flex;
-    display: block;
-    width: 70%;
-    max-width: 70%;
-    height: 120px;
-    margin: auto;
-    background-color: white;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  .search_result_location_container {
-    display: none;
-  }
-
-  .search_result_description_container {
-    display: inline-flex;
-    width: 100%;
-    vertical-align: middle;
-  }
-
-  .search_result_img_container
-  {
-    height: 100px;
-    width: 100px;
-  }
-  .search_result_description
-  {
-      font-size: 12px;
-      margin-top: 16px;
-      font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
-      text-align: left;
-      width: 100%;
-  }
-  .search_result_price
-  {
-    font-size: 16px;
-  }
+	.search_result_item_container {
+		height: 100px !important;
+	}
+	.search_result_location_container {
+		display: none;
+	}
+	.search_result_description_container {
+		display: inline-flex;
+		width: 100%;
+		vertical-align: middle;
+	}
+	.search_result_img_container{
+		height: 100px;
+		width: 100px;
+	}
+	.search_result_description{
+		font-size: 12px;
+		margin-top: 16px;
+		font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+		text-align: left;
+		width: 95%;
+	}
+	.search_result_price{
+		font-size: 16px;
+	}
+	.search_result_img{
+		width: 90px;
+		height: 90px;
+		margin-left: 5px;
+	}
+	.search_result_detail_container {
+		height: 130px;
+		vertical-align: middle;
+	}
+	.search_result_icon{
+		display: none;
+	}
 }

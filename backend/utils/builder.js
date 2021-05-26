@@ -48,7 +48,7 @@ function BuildItems(data) {
         result.categories = {};
         result.items = [];
         let promises = items.map(function(item){
-            return BuildItem(item);
+            return BuildItem(item,true);
           });
         let catpromise = getCategories(data.filters).then(
             function(cats)
@@ -151,6 +151,7 @@ function BuildItem(data, thumbnail = false) {
         else
         {
             let src_aux = data.thumbnail; //.replace('-I','-O')
+            console.log(data);
             result.picture = src_aux;
         }
         console.log("A3")

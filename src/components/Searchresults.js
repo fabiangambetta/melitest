@@ -6,6 +6,7 @@ import {
     useLocation
 } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
+import Notresults from "./Notresults";
 
 function Searchresults() {
     let [items, setItems] = useState(null);
@@ -47,9 +48,10 @@ function Searchresults() {
         );
     }
     else if(error){
+        const message = 'No se ha recuperado ningún resultado para su búsqueda.'
         return (
             <div className="search_result_container">
-                <div>No se ha recuperado ningún resultado para la búsqueda realizada</div>
+                <Notresults message= {message}/>
             </div>)
     }
     else{
