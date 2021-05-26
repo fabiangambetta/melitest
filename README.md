@@ -12,10 +12,9 @@
 # Instalación y despliegue
 
 ## Backend:
-
-- cd backend 
-- npm install
-- node api.js
+    cd backend 
+    npm install
+    node api.js
 
 
 ## Frontend:
