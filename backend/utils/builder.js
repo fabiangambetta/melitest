@@ -4,6 +4,7 @@ AL FORMATO ESPECÍFICADO */
 const axios = require('axios');
 const MELI_API = require("./meli_api.js");
 
+/*Para la búsqueda, las categorías se obtienen de la propiedad filter*/
 const getCategories = function(filters){
     return new Promise(function(resolve, reject){
       let categories = [];
@@ -19,6 +20,8 @@ const getCategories = function(filters){
     });
   }
 
+  /*Para la búsqueda por elemento, las categorías se obtienen a partir de la propiedad category_id
+  e invocando a la api de categories de meli */
   const getCategoriesById = function(category_id)
   {
     return new Promise(function(resolve, reject){
@@ -26,7 +29,6 @@ const getCategories = function(filters){
         const urlApiCategory = MELI_API.GET_CATEGORIES_URL(category_id);
         axios.get(urlApiCategory)
         .then(function(response){
-            console.log(response.data.path_from_root)
             categories = response.data.path_from_root.map(function(value) {
                 return value.name
 			});
@@ -67,6 +69,7 @@ function BuildItems(data) {
     })
 }
 
+/*Obtiene la descripción de un elemento */
 const getDescription = function (itemId) {
     return new Promise(function (resolve, reject) {
         const urlApiItemDescription = MELI_API.GET_DESCRIPTION_URL(itemId);
@@ -75,12 +78,12 @@ const getDescription = function (itemId) {
                 resolve(response.data.plain_text);
             })
             .catch(function (response) {
-                console.log("ERROR 8")
                 reject(response);
             });
     });
 }
 
+/*Obtiene información de la moneda, en particular su símbolo*/
 const getCurrency = function (currency_id) {
     return new Promise(function (resolve, reject) {
         const urlCurrencyUrl = MELI_API.GET_CURRENCY_URL(currency_id);
@@ -92,7 +95,6 @@ const getCurrency = function (currency_id) {
                 resolve(currency);
             })
             .catch(function (response) {
-                console.log("ERROR 7")
                 reject(response);
             });
     });
@@ -100,13 +102,12 @@ const getCurrency = function (currency_id) {
 
 function BuildItemWithAuthor(data)
 {
+    /*Este método construye el objeto para una búsqueda por elemento */
     return new Promise(function(resolve,reject)
     {
-        console.log("111111")
         let result = {};
         let buildpromise = BuildItem(data).then(function(item)
         {
-            console.log("222222")
             result.author = { name: "Fabián", lastname: "Gambetta" };
             result.item = item;
         })

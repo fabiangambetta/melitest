@@ -32,7 +32,7 @@ app.get('/api/items', cors(), function (req, res) {
                 res.send(data);
             })
             .catch(function(response){
-
+                console.error(response);
             })
         }).
         catch(function (err) {
@@ -49,8 +49,8 @@ app.get('/api/items/:id', cors(), function (req, res) {
             then(function (data) {
                 res.send(data);
             })
-            .catch(function (data) {
-                res.send(data);
+            .catch(function (err) {
+                res.send(err);
             })
         })
         .catch(function(err){
