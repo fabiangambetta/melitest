@@ -52,12 +52,15 @@ En la raíz del repositorio está el enunciado, información de la auditoría de
  - Uso de atributos ARIA para mejorar SEO.
  - Se crea una vista adicional para notificar al usuario cuando no se han encontrado resultados para su búsqueda.
  - Uso PropTypes para definir el formato esperado de props por cada componente.
+ - Componentes funcionales con hooks.
 
 #Backend
  - Se habilitan CORS para localhost:3000 unicamente.
  - Se utilizan Promises en todas las llamadas a la api.
  - El objeto que la api debe retornar para la búsqueda de un item se le agregó la propiedad categories para que tenga la información de sus categorías.
  - Se utilizan las api's https://api.mercadolibre.com/currencies y https://api.mercadolibre.com/categories para obtener información de las monedas y categorías respectivamente.
+ - Se añaden etiquetas meta en index.html y se modifica manifest.json para mejorar el SEO.
+ - Se añaden etiquetas ARIA y todas las imagenes cuentan con el atributo alt para mejorar usabilidad.
 
 ### Imagenes
 Para el atributo thumbnai en la api https://api.mercadolibre.com/sites/MLA/search?q=:query no siempre tienen un tamaño 90x90 como suguiere la propuesta, debido a esto y para no estiar la imagen en la pantalla que muestra los resultados de las búsquedas decidí que la imagen respete el width 180 px, si la imagen es 90x90 
