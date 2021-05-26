@@ -41,10 +41,13 @@
     .product_details_img_container {
       width: 400px;
       margin-top: 32px;
-      margin-left: 32px;
     }
     .product_details_img {
-      height: 70%;
+      margin-top: 10px;
+      width: 80%;
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
     }
     .product_detail_container {
       margin: auto;

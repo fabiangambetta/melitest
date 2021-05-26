@@ -46,11 +46,11 @@ Searchitemresult.propTypes = {
         push: PropTypes.func.isRequired
     }),
     item: PropTypes.shape({
-        id:PropTypes.number,
+        id:PropTypes.string,
         picture: PropTypes.string,
         price:PropTypes.shape({
             currency: PropTypes.string,
-            amount: PropTypes.string
+            amount: PropTypes.number
         }),
         free_shipping:PropTypes.bool,
         title:PropTypes.string,
