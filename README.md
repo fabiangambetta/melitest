@@ -5,29 +5,45 @@
     - HTML
     - Java Script
     - CSS
-## Backend
+## Backend 
     - ExpressJS
     - Node js (v14.16.0)
 
 # Instalación y despliegue
 
 ## Backend:
-    cd meli/backend 
-    npm install
-    node api.js
+    cd melitest/backend 
+    npm i
+    npm run start
 
 
 ## Frontend:
-
-- npm install
+- cd melitest/frontend
+- npm i
 - npm run build
-- npm start
+- npm run start
 
 # Nota
 
 Por defecto el servidor corre en localhost:4001, en modo "dev" (desarrollo) y espera que el frontend corra en localhost:3000.
 Si es necesario modificar el puerto de la api consumida en el frontend
 
+# Estructura
+
+El proyecto se divide en dos carpetas: La carpeta frontend la cual contiene la aplicación de Reactjs y la carpeta backend la cual contiene el servidor Node.js.
+En la raíz del repositorio está el enunciado, información de la auditoría de Google Lighthouse y el Readme.
+
+*Backend
+  - Utils
+  - api.js
+*frontend
+ - public
+ - src
+   - assets
+     - images
+     - styles
+   - components
+   - utils
 
 #Frontend
  - Diseño responsivo usando media queries de CSS.
