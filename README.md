@@ -35,10 +35,10 @@ Si es necesario modificar el puerto del servidor, el mismo se debe modificar en:
 El proyecto se divide en dos carpetas: La carpeta frontend la cual contiene la aplicación de Reactjs y la carpeta backend la cual contiene el servidor Node.js.
 En la raíz del repositorio está el enunciado, información de la auditoría de Google Lighthouse y el Readme.
 
--Backend
+- Backend
   - Utils
   - api.js
--frontend
+- frontend
  - public
  - src
    - assets
