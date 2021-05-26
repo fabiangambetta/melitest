@@ -11,6 +11,8 @@
 
 # Instalación y despliegue
 
+En el archivo .nvmrc se específica la versión de Node a utilizar.
+
 ## Backend:
     cd melitest/backend 
     npm i
