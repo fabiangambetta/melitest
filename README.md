@@ -36,16 +36,16 @@ El proyecto se divide en dos carpetas: La carpeta frontend la cual contiene la a
 En la raíz del repositorio está el enunciado, información de la auditoría de Google Lighthouse y el Readme.
 
 - Backend
-  - Utils
-  - api.js
+   - Utils
+   - api.js
 - frontend
- - public
- - src
-   - assets
-     - images
-     - styles
-   - components
-   - utils
+  - public
+  - src
+    - assets
+      - images
+      - styles
+    - components
+    - utils
 
 #Frontend
  - Diseño responsivo usando media queries de CSS.
