@@ -64,7 +64,7 @@ En la raíz del repositorio está el enunciado, información de la auditoría de
  - Se añaden etiquetas meta en index.html y se modifica manifest.json para mejorar el SEO.
  - Se añaden etiquetas ARIA y todas las imagenes cuentan con el atributo alt para mejorar usabilidad.
 
-### Imágenes
+# Imágenes
 Para el atributo thumbnail en la api https://api.mercadolibre.com/sites/MLA/search?q=:query no siempre tienen un tamaño 90x90 como suguiere la propuesta, debido a esto y para no estirar la imagen en la pantalla que muestra los resultados de las búsquedas decidí que la imagen respete el width 180 px, si la imagen es 90x90 
 se mostrará con un tamaño 180x180, sino se mostrará 180 x heigth, con max-heigth 180 px.
 
