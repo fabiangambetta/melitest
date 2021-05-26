@@ -35,7 +35,7 @@ function Searchresults() {
 
     if (items) {
         const listitemresults = items.map((item,index) =>
-           <Searchitemresult key={index} item={item} last={index == items.length-1} ></Searchitemresult>
+           <Searchitemresult key={index} item={item} last={index === items.length-1} ></Searchitemresult>
         );
         return (
             <div>

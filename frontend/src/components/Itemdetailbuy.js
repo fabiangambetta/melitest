@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import "../assets/styles/components/Itemdetailbuy.css";
 
 const Itemdetailbuy = (props) => {
-  const condicion = props.item.condition == "used" ? "Usado" : "Nuevo";
+  const condicion = props.item.condition === "used" ? "Usado" : "Nuevo";
   const vendidos = `${props.item.sold_quantity} vendidos`;
   const precioconformato = COMMON.formatNumber(props.item.price.amount);
-  const decimals = "0".repeat(props.item.price.decimals);
   return (
     <div className="product_detail_price_container">
       <div

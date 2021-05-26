@@ -12,8 +12,8 @@ function searchItems(querysearch){
         sendRequest(url)
         .then(function (data) {
             resolve(data);
-        }).
-        catch(function (err) {
+        })
+        .catch(function (err) {
             reject(err);
         })
     });
@@ -27,8 +27,8 @@ function searchItemById(id) {
         sendRequest(url) 
         .then(function (data) {
             resolve(data);
-        }).
-        catch(function (err) {
+        })
+        .catch(function (err) {
             reject(err);
         })
     })

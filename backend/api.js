@@ -24,11 +24,8 @@ app.get('/', function (req, res) {
 
 /* Ruta para obtener los elementos de que coínciden con la búsqueda */
 app.get('/api/items', cors(), function (req, res) {
-
-    console.log("ITES");
     let searchquery = req.query.q;
     let endpoint = MELI_API.GET_SEARCH_URL(searchquery);
-    console.log(endpoint);
     axios.get(endpoint)
         .then(function (response) {
             ItemBuilder.BuildItems(response.data,true).then(function (data) {
@@ -47,9 +44,7 @@ app.get('/api/items', cors(), function (req, res) {
 app.get('/api/items/:id', cors(), function (req, res) {
         let itemid = req.params.id;
         let endpoint = MELI_API.GET_ITEM_URL(itemid);
-        console.log(endpoint);
         axios.get(endpoint).then(function (response) {
-            console.log("data api");
             ItemBuilder.BuildItem(response.data).
             then(function (data) {
                 res.send(data);

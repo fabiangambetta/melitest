@@ -151,35 +151,29 @@ function BuildItem(data, thumbnail = false) {
         else
         {
             let src_aux = data.thumbnail; //.replace('-I','-O')
-            console.log(data);
             result.picture = src_aux;
         }
-        console.log("A3")
         let CurrencyProm = getCurrency(data.currency_id)
             .then(
                 function (response) {
-                    console.log("A4")
                     result.price.currency = response.symbol;
                     result.price.decimals = response.decimals;
                 }
             ).catch(function(){
-                console.log("ERROR 3")
+
             })
         let DescriptionProm = getDescription(data.id)
             .then(
                 function (description) {
-                    console.log("A5")
                     result.description = description;
                 }
-            ).catch(function(data){
-                console.log("ERROR 4")
+            ).catch(function(err){
+                console.error(err);
             })
         Promise.all([CurrencyProm, DescriptionProm]).then(function () {
-            console.log("A6")
             resolve(result);
         })
         .catch(function (err) {
-            console.log("ERROR 5")
             reject(result);
         })
     });
