@@ -6,6 +6,7 @@ const CURRENCY = `${API_URL}/currencies/:id`;
 const CATEGORIES =`${API_URL}/categories/:id`;
 
 
+
 const GET_CATEGORIES_URL = (catid) =>{
     return CATEGORIES.replace(':id',catid);
 }
