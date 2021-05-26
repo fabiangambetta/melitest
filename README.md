@@ -74,6 +74,7 @@ se mostrará con un tamaño 180x180, sino se mostrará 180 x heigth, con max-hei
  - [Performance] Incorporar Server Side Rendering.
  - [PWA] Redireccionar Tráfico https y registrar Service Worker.
  - [Testing] Implementar test automatizados.
+ - [Usabilidad] Añadir un spinner cuando se procesan las búsquedas.
 
  Oportunidades de mejora en el Backend
  - [Performance] Implementar una caché para datos reutilizables y que entiendo no cambian frecuentemente, por ejemplo, las currency.
