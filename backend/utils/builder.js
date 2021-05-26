@@ -111,16 +111,12 @@ function BuildItemWithAuthor(data)
             result.item = item;
         })
         .catch(function(){
-            console.log("333333")
-            console.log("ERROR 12")
         })
         let promisecategory = getCategoriesById(data.category_id).then(function(data){
-            console.log("444444")
             result.categories = data;
         })
         .catch(function(){
-            console.log("555555")
-            console.log("ERROR 13")
+
         })
         Promise.all([buildpromise,promisecategory]).then(
             function(){
